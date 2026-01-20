@@ -145,6 +145,101 @@ function initScrollAnimations() {
 }
 
 // ============================================
+// NETWORK ANIMATION (Hero)
+// ============================================
+
+function initNetworkAnimation() {
+    const canvas = document.getElementById('networkCanvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+    
+    resize();
+    window.addEventListener('resize', resize);
+    
+    const nodes = [];
+    const nodeCount = 45;
+    const connectionDistance = 130;
+    
+    for (let i = 0; i < nodeCount; i++) {
+        nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            radius: Math.random() * 2 + 1.5
+        });
+    }
+    
+    function getGradientColor(x, width) {
+        const ratio = x / width;
+        const r = Math.round(0 + ratio * 124);
+        const g = Math.round(212 + ratio * (58 - 212));
+        const b = Math.round(255 + ratio * (237 - 255));
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+    
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Mise a jour des positions
+        nodes.forEach(node => {
+            node.x += node.vx;
+            node.y += node.vy;
+            
+            if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+            if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+            
+            node.x = Math.max(0, Math.min(canvas.width, node.x));
+            node.y = Math.max(0, Math.min(canvas.height, node.y));
+        });
+        
+        // Dessiner les connexions
+        for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+                const dx = nodes[i].x - nodes[j].x;
+                const dy = nodes[i].y - nodes[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < connectionDistance) {
+                    const opacity = (1 - distance / connectionDistance) * 0.4;
+                    const midX = (nodes[i].x + nodes[j].x) / 2;
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[i].x, nodes[i].y);
+                    ctx.lineTo(nodes[j].x, nodes[j].y);
+                    ctx.strokeStyle = getGradientColor(midX, canvas.width);
+                    ctx.globalAlpha = opacity;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    ctx.globalAlpha = 1;
+                }
+            }
+        }
+        
+        // Dessiner les nodes
+        nodes.forEach(node => {
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+            ctx.fillStyle = getGradientColor(node.x, canvas.width);
+            ctx.globalAlpha = 0.8;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+        });
+        
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+}
+
+// ============================================
 // INITIALISATION
 // ============================================
 
@@ -184,6 +279,9 @@ function init() {
         container.innerHTML = PROJECTS_DATA.map(p => generateProjectHTML(p)).join('');
     }
     
+    // Animation reseau hero
+    initNetworkAnimation();
+
     // Initialisation des animations
     initScrollAnimations();
     
