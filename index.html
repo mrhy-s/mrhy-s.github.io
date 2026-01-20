@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis GUÉROUT | Portfolio Cybersécurité</title>
+    <meta name="description" content="Portfolio de Louis Guérout - Étudiant en informatique et cybersécurité à Ynov Rouen">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">louis_guerout</a>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">Disponible pour une alternance</div>
+            <h1>Louis <span class="highlight">GUÉROUT</span></h1>
+            <p class="hero-subtitle">
+                Passionné d'informatique et de cybersécurité depuis l'âge de 10 ans. 
+                Étudiant en Bachelor 1 à Ynov Rouen, j'ai un attrait particulier pour la création 
+                et l'expérimentation : du NAS au logiciel.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    Voir mes projets
+                    <span>→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <p class="terminal-prompt-text"><span class="user">visitor@portfolio</span>:<span class="path">~/about</span>$ cat profil.txt</p>
+            <div class="section-label">01. À propos</div>
+            <h2 class="section-title">Qui suis-je ?</h2>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    <span class="emphasis">Fast-learner, investi et passionné</span>, je suis un étudiant 
+                    en informatique et cybersécurité qui aime comprendre comment les choses fonctionnent 
+                    et les construire moi-même.
+                </p>
+                <p>
+                    À l'aise sous <span class="emphasis">Linux (Debian)</span> et Windows, avec des bases 
+                    solides en <span class="emphasis">Golang</span> et scripting <span class="emphasis">Bash</span>, 
+                    j'ai développé mes compétences à travers des projets concrets : de la création d'un serveur 
+                    NAS personnel à la participation à des hackathons militaires.
+                </p>
+                <p>
+                    Reconnu RQTH, j'ai appris à transformer mes défis en forces. Cette détermination 
+                    m'a permis de développer une rigueur et une persévérance qui font aujourd'hui 
+                    partie de mes atouts.
+                </p>
+            </div>
+            
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="years-passion">10+</div>
+                    <div class="stat-label">Années de passion</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">B2</div>
+                    <div class="stat-label">Anglais</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="project-count">3</div>
+                    <div class="stat-label">Projets majeurs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Curiosité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <p class="terminal-prompt-text"><span class="user">visitor@portfolio</span>:<span class="path">~/skills</span>$ ls -la</p>
+            <div class="section-label">02. Compétences</div>
+            <h2 class="section-title">Ce que je maîtrise</h2>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-icon">🖥️</div>
+                <h3>Systèmes</h3>
+                <ul class="skill-list">
+                    <li>Linux Debian 12 (avancé)</li>
+                    <li>Windows 10/11 & PowerShell</li>
+                    <li>VMware, VirtualBox, QEMU/KVM</li>
+                    <li>Services systemd & SSH</li>
+                    <li>VLANs, bridges, iptables</li>
+                    <li>RAID & partages SMB</li>
+                    <li>Cron jobs & automatisation</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">⌨️</div>
+                <h3>Développement</h3>
+                <ul class="skill-list">
+                    <li>Golang (CLI, fichiers)</li>
+                    <li>Python & C</li>
+                    <li>Bash scripting</li>
+                    <li>Git & GitHub</li>
+                    <li>SQLite & MySQL</li>
+                    <li>API REST</li>
+                    <li>Markdown & documentation</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">🔒</div>
+                <h3>Cybersécurité</h3>
+                <ul class="skill-list">
+                    <li>Wireshark & Nmap</li>
+                    <li>Proxmox & Docker</li>
+                    <li>Firewall pf/OpenBSD</li>
+                    <li>Root-Me & CTF</li>
+                    <li>Fail2ban & AppArmor</li>
+                    <li>Forensics (bases)</li>
+                    <li>Sécurisation réseau</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <p class="terminal-prompt-text"><span class="user">visitor@portfolio</span>:<span class="path">~/projects</span>$ ./list_projects.sh</p>
+            <div class="section-label">03. Projets</div>
+            <h2 class="section-title">Mes réalisations</h2>
+        </div>
+        
+        <div class="projects-grid" id="projects-container">
+            <!-- Les projets sont chargés dynamiquement depuis les fichiers JSON -->
+            <p class="terminal-prompt-text">Chargement des projets...</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <p class="terminal-prompt-text"><span class="user">visitor@portfolio</span>:<span class="path">~/contact</span>$ ./send_message.sh</p>
+            <div class="section-label">04. Contact</div>
+            <h2 class="section-title">Travaillons ensemble</h2>
+        </div>
+        
+        <div class="contact-content">
+            <p>
+                Je suis actuellement à la recherche d'une alternance en informatique ou cybersécurité. 
+                N'hésitez pas à me contacter !
+            </p>
+            
+            <div class="contact-links">
+                <a href="mailto:louis.guerout@ynov.com" class="contact-link">
+                    <span>✉️</span>
+                    louis.guerout@ynov.com
+                </a>
+                <a href="mailto:louis.guerout@proton.me" class="contact-link">
+                    <span>✉️</span>
+                    louis.guerout@proton.me
+                </a>
+                <a href="https://www.linkedin.com/in/louis-gu%C3%A9rout-32213a382" target="_blank" class="contact-link">
+                    <span>💼</span>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>while(true) { learn(); build(); repeat(); }</p>
+        <p>© <span id="current-year">2026</span> Louis GUÉROUT : Dieppe, France</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/projects-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
