@@ -49,6 +49,160 @@ body::before {
     z-index: 1000;
 }
 
+/* ===== Styles pour les icones SVG ===== */
+.ico {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+.ico--lg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ico--xl {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.ico--accent {
+    color: #00ff88;
+}
+
+.ico--secondary {
+    color: #60a5fa;
+}
+
+/* Icone dans les skill-category */
+.skill-category .skill-icon-wrap {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+}
+
+.skill-category .skill-icon-wrap.skill-icon-wrap--blue {
+    background: rgba(96, 165, 250, 0.1);
+    color: #60a5fa;
+}
+
+.skill-category .skill-icon-wrap.skill-icon-wrap--purple {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+}
+
+/* Icones dans les boutons */
+.btn .ico {
+    margin-right: 0.4em;
+}
+
+/* Icones dans les contact-link */
+.contact-link .ico {
+    margin-right: 0.5em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+/* Icones dans le footer */
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.footer-social:hover {
+    color: #00ff88;
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+/* Stat card icon */
+.stat-card .stat-icon {
+    margin-bottom: 0.5rem;
+    color: #00ff88;
+}
+
+/* Hero badge icon */
+.hero-badge .ico {
+    margin-right: 0.3em;
+    width: 0.8em;
+    height: 0.8em;
+    color: #00ff88;
+}
+
+/* Project card icons */
+.project-card .project-icon-wrap {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    margin-bottom: 0.75rem;
+}
+
+/* Section label icon */
+.section-label .ico {
+    margin-right: 0.3em;
+    width: 1em;
+    height: 1em;
+}
+
+/* Nav link icons */
+.nav-links a .ico {
+    margin-right: 0.3em;
+    width: 1em;
+    height: 1em;
+    opacity: 0.7;
+}
+
+.nav-links a:hover .ico {
+    opacity: 1;
+    color: #00ff88;
+}
+
+/* Skill list item bullets */
+.skill-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.skill-list li .ico {
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 0.35em;
+    color: #00ff88;
+    flex-shrink: 0;
+}
+
 /* ============================================
    NAVIGATION
    ============================================ */
