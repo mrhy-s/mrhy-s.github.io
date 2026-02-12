@@ -70,7 +70,8 @@ const PROJECTS_DATA = [
                 "Jellyfin",
                 "Portainer",
                 "Tailscale VPN",
-                "OpenMediaVault"
+                "OpenMediaVault",
+                "Firewall"
             ]
         },
         links: {}
@@ -96,15 +97,19 @@ const PROJECTS_DATA = [
             "HAProxy",
             "Grafana",
             "VLANs",
-            "Git"
+            "Git",
+            "Bastion",
+            "Automatisation"
         ],
-        learnings: "Travail sous contrainte et deadlines serrées, architecture sobre et résiliente, documentation technique (procédures, runbooks, DAT), schématisation d'architecture, coordination inter-équipes, haute disponibilité, déploiement automatisé.",
+        learnings: "Travail sous contrainte et deadlines serrées, architecture sobre et résiliente, documentation technique (procédures, runbooks, DAT), schématisation d'architecture, coordination inter-membres, haute disponibilité, déploiement automatisé.",
         visualType: "image",
         visualData: {
             src: "assets/foxyhack-logo.png",
             alt: "FoxyHack Logo"
         },
-        links: {}
+        links: {
+            linkedin: "https://www.linkedin.com/posts/louis-gu%C3%A9rout_foxyhack-2026-d%C3%A9ployer-un-si-souverain-ugcPost-7427781675029540865-TkOt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5ZJEoBjyaB-zyO1IwecoHdvmd5kvWAbJg"
+        }
     },
 
     // ==========================================
